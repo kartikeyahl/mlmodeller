@@ -40,6 +40,7 @@ def DecisionTree(request):
         classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
         classifier.fit(X_train, y_train)
         result = classifier.predict(sc.transform(lst))
+        context['result'] = result
     return render(request,template_name,context)
 
 def KNearestNeighbors(request):
@@ -69,6 +70,7 @@ def KNearestNeighbors(request):
         classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
         classifier.fit(X_train, y_train)
         result = classifier.predict(sc.transform(lst))
+        context['result'] = result
     return render(request,template_name,context)
 
 
@@ -99,6 +101,7 @@ def KernelSVM(request):
         classifier = SVC(kernel = 'rbf', random_state = 0)
         classifier.fit(X_train, y_train)
         result = classifier.predict(sc.transform(lst))
+        context['result'] = result
     return render(request,template_name,context)
 
 
@@ -129,6 +132,7 @@ def LogisticRegression(request):
         classifier = LogisticRegression(random_state = 0)
         classifier.fit(X_train, y_train)
         result = classifier.predict(sc.transform(lst))
+        context['result'] = result
     return render(request,template_name,context)
 
 def NaiveBayes(request):
@@ -158,6 +162,7 @@ def NaiveBayes(request):
         classifier = GaussianNB()
         classifier.fit(X_train, y_train)
         result = classifier.predict(sc.transform(lst))
+        context['result'] = result
     return render(request,template_name,context)
 
 
@@ -188,6 +193,7 @@ def RandomForest(request):
         classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
         classifier.fit(X_train, y_train)
         result = classifier.predict(sc.transform(lst))
+        context['result'] = result
     return render(request,template_name,context)
 
 
@@ -218,4 +224,5 @@ def SupportVector(request):
         classifier = SVC(kernel = 'linear', random_state = 0)
         classifier.fit(X_train, y_train)
         result = classifier.predict(sc.transform(lst))
+        context['result'] = result
     return render(request,template_name,context)

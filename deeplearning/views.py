@@ -47,6 +47,7 @@ def ANNSigmoiod(request):
                     metrics=['accuracy'])
         ann.fit(X_train, y_train, batch_size=32, epochs=100)
         result = ann.predict_classes(sc.transform(lst))
+        context['result'] = result
     return render(request, template_name, context)
 
 
@@ -82,4 +83,5 @@ def ANNSoftmax(request):
                     metrics=['accuracy'])
         ann.fit(X_train, y_train, batch_size=32, epochs=100)
         result = ann.predict_classes(sc.transform(lst))
+        context['result'] = result
     return render(request, template_name, context)
