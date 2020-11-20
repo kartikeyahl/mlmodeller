@@ -6,7 +6,8 @@ from .views import DecisonTreeRegression, MultipleLinearRegression, PolynomialRe
 def Index(request):
     template_name="Regression/Regression.html"
     context = {
-        "regressionPage":True
+        "regressionPage":True,
+        'title':'ML MODELLDER | Regression',
     }
     return render(request, template_name,context)
 urlpatterns = [

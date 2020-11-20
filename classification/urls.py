@@ -6,7 +6,8 @@ from .views import DecisionTree, KNearestNeighbors, KernelSVM, LogisticRegressio
 def Index(request):
     template_name="Classification/Classification.html"
     context = {
-        "classificationPage":True
+        "classificationPage":True,
+        'title':'ML MODELLDER | Classification',
     }
     return render(request, template_name,context)
 

@@ -16,6 +16,7 @@ from sklearn.ensemble import RandomForestClassifier
 def DecisionTree(request):
     context = {}
     context['classificationPage'] = True
+    context['title'] = 'Decision Tree Classification'
     template_name = "Classification/Sub-Categories/Decision Tree.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -46,6 +47,7 @@ def DecisionTree(request):
 def KNearestNeighbors(request):
     context = {}
     context['classificationPage'] = True
+    context['title'] = 'KNN Classification'
     template_name = "Classification/Sub-Categories/KNN.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -77,6 +79,7 @@ def KNearestNeighbors(request):
 def KernelSVM(request):
     context = {}
     context['classificationPage'] = True
+    context['title'] = 'Kernel SVM Classification'
     template_name = "Classification/Sub-Categories/Kernel SVM.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -108,6 +111,7 @@ def KernelSVM(request):
 def LogisticRegression(request):
     context = {}
     context['classificationPage'] = True
+    context['title'] = 'Logistic Regression Classification'
     template_name = "Classification/Sub-Categories/Logistic Regression.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -138,6 +142,7 @@ def LogisticRegression(request):
 def NaiveBayes(request):
     context = {}
     context['classificationPage'] = True
+    context['title'] = 'Naive Bayes Classification'
     template_name = "Classification/Sub-Categories/Naive Bayes.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -169,6 +174,7 @@ def NaiveBayes(request):
 def RandomForest(request):
     context = {}
     context['classificationPage'] = True
+    context['title'] = 'Random Forest Classification'
     template_name = "Classification/Sub-Categories/Random Forest.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -200,6 +206,7 @@ def RandomForest(request):
 def SupportVector(request):
     context = {}
     context['classificationPage'] = True
+    context['title'] = 'Support Vector Classification'
     template_name = "Classification/Sub-Categories/Support Vector.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']

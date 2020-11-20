@@ -5,8 +5,10 @@ from django.views.generic import TemplateView
 
 def Index(request):
     template_name='index.html'
-    context = {}
-    context['homePage'] = True
+    context = {
+        'homePage':True,
+        'title':'ML MODELLDER | Home'
+    }
     return render(request, template_name,context)
 
 urlpatterns = [

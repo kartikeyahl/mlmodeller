@@ -5,7 +5,8 @@ from .views import ANNSigmoiod , ANNSoftmax
 def Index(request):
     template_name="Deep Learning/Deep Learning.html"
     context = {
-        "deeplearningPage":True
+        "deeplearningPage":True,
+        'title':'ML MODELLDER | Deep Learning',
     }
     return render(request, template_name,context)
 
