@@ -12,6 +12,6 @@ def Index(request):
 
 urlpatterns = [
     path('',Index,name="Deeplearning"),
-    path('ann-sigmoid/',ANNSigmoiod),
-    path('ann-softmax/',ANNSoftmax),
+    path('ann-sigmoid/',ANNSigmoiod,name="ann-sigmoid"),
+    path('ann-softmax/',ANNSoftmax,name="ann-softmax"),
 ]
