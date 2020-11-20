@@ -11,10 +11,10 @@ def Index(request):
     return render(request, template_name,context)
 urlpatterns = [
     path('',Index,name="regression"),
-    path('decisiontree-regression/', DecisonTreeRegression),
-    path('multiple-linear-regression/', MultipleLinearRegression),
-    path('polynomial-regression/', PolynomialRegression),
-    path('random-forest-regression/', RandomForestRegression),
-    path('simple-linear-regression/', SimpleLinearRegression),
-    path('support-vector-regression/', SupportVectorRegression),
+    path('decisiontree-regression/', DecisonTreeRegression,name="decisiontree-regression"),
+    path('multiple-linear-regression/', MultipleLinearRegression,name="multiple-linear-regression"),
+    path('polynomial-regression/', PolynomialRegression,name="polynomial-regression"),
+    path('random-forest-regression/', RandomForestRegression,name="random-forest-regression"),
+    path('simple-linear-regression/', SimpleLinearRegression,name="simple-linear-regression"),
+    path('support-vector-regression/', SupportVectorRegression,name="support-vector-regression"),
 ]
