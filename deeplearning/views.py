@@ -15,6 +15,7 @@ from sklearn.preprocessing import StandardScaler
 def ANNSigmoiod(request):
     context = {}
     context["deeplearningPage"] = True
+    context['title'] = 'DL | ANN Signoiod'
     template_name = "Deep Learning/Sub-Categories/Artificial NN(Sigmoid).html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -54,6 +55,7 @@ def ANNSigmoiod(request):
 def ANNSoftmax(request):
     context = {}
     context["deeplearningPage"] = True
+    context['title'] = 'DL | ANN Softmax'
     template_name = "Deep Learning/Sub-Categories/Artificial NN(Sigmoid).html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']

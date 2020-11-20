@@ -16,6 +16,7 @@ from sklearn.svm import SVR
 def DecisonTreeRegression(request):
     context = {}
     context["regressionPage"] = True
+    context['title'] = 'Decission Tree Regression'
     template_name = "Regression/Sub-Categories/Decision Tree Regression.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -43,6 +44,7 @@ def DecisonTreeRegression(request):
 def MultipleLinearRegression(request):
     context = {}
     context["regressionPage"] = True
+    context['title'] = 'Multiple Linear Regression'
     template_name = "Regression/Sub-Categories/Multiple Linear Regression.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -72,6 +74,7 @@ def MultipleLinearRegression(request):
 def PolynomialRegression(request):
     context = {}
     context["regressionPage"] = True
+    context['title'] = 'Polynomial Regression'
     template_name = "Regression/Sub-Categories/Polynomial Regression.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -103,6 +106,7 @@ def PolynomialRegression(request):
 def RandomForestRegression(request):
     context = {}
     context["regressionPage"] = True
+    context['title'] = 'Random Forest Regression'
     template_name = "Regression/Sub-Categories/Random Forest Regression.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -130,6 +134,7 @@ def RandomForestRegression(request):
 def SimpleLinearRegression(request):
     context = {}
     context["regressionPage"] = True
+    context['title'] = 'SImple Linear Regression'
     template_name = "Regression/Sub-Categories/Simple Linear Regression.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -159,6 +164,7 @@ def SimpleLinearRegression(request):
 def SupportVectorRegression(request):
     context = {}
     context["regressionPage"] = True
+    context['title'] = 'Support Vector Regression'
     template_name = "Regression/Sub-Categories/Support Vector Regression.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
