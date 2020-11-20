@@ -28,20 +28,20 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto ">
 						<li class="nav-item">                 
-							<a class="nav-link active" href="#">Home</a>
+							<a class="nav-link {% if homePage  %} active {% endif %} " href="/">Home</a>
 						</li>
 						<!-------------------------->
 						<li class="nav-item">
-							<a class="nav-link" href="Algorithms/Classification/Classification.html#algorithms">Classification</a>
+							<a class="nav-link {% if classificationPage  %} active {% endif %} " href="{% url 'classfication' %}">Classification</a>
 						</li>
 						<!-------------------------->
 						<!-------------------------->
 						<li class="nav-item">
-							<a class="nav-link" href="Algorithms/Deep learning/Deep Learning.html#algorithms">Deep Learning</a>
+							<a class="nav-link {% if deeplearningPage  %} active {% endif %} " href="{% url 'Deeplearning' %}">Deep Learning</a>
 						</li>
 						<!-------------------------->
 						<li class="nav-item">
-							<a class="nav-link" href="Algorithms/Regression/Regression.html#algorithms">Regression</a>
+							<a class="nav-link {% if regressionPage %} active {% endif %} " href="{% url 'regression' %}">Regression</a>
 						</li>
 					</ul>
 				</div>

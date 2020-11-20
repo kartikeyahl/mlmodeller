@@ -1,9 +1,17 @@
 from django.contrib import admin
+from django.shortcuts import render ,redirect
 from django.urls import path, include
 from django.views.generic import TemplateView
+
+def Index(request):
+    template_name='index.html'
+    context = {}
+    context['homePage'] = True
+    return render(request, template_name,context)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',TemplateView.as_view(template_name='index.html')),
+    path('',Index),
     path('classification/', include('classification.urls')),
     path('deeplearning/', include('deeplearning.urls')),
     path('regression/', include('regression.urls')),
