@@ -12,11 +12,11 @@ def Index(request):
 
 urlpatterns = [
     path('',Index,name="classfication"),
-    path('decision-tree/', DecisionTree),
-    path('k-nearest-neighbors/', KNearestNeighbors),
-    path('kernel-svm/', KernelSVM),
-    path('logistic-regression/', LogisticRegression),
-    path('naive-bayes/', NaiveBayes),
-    path('random-forest/', RandomForest),
-    path('support-vector/', SupportVector)
+    path('decision-tree/', DecisionTree,name="decision-tree"),
+    path('k-nearest-neighbors/', KNearestNeighbors,name="k-nearest-neighbors"),
+    path('kernel-svm/', KernelSVM,name="kernel-svm"),
+    path('logistic-regression/', LogisticRegression,name="logistic-regression"),
+    path('naive-bayes/', NaiveBayes,name="naive-bayes"),
+    path('random-forest/', RandomForest,name="random-forest"),
+    path('support-vector/', SupportVector,name="support-vector")
 ]
