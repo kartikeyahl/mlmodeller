@@ -58,7 +58,7 @@ body {
 }
 /*LANDING PAGE SECTION*/
 .home-inner {
-	background-image: linear-gradient(to right bottom, rgba(140,34,192,0.8), rgba(45,31,220,0.8)), url('../Images/backgrounds/computers.png');
+	background-image: linear-gradient(to right bottom, rgba(140,34,192,0.8), rgba(45,31,220,0.8)), url(../Images/Backgrounds/Computers.png);
 }
 .caption {
 	width: 100%;
@@ -145,7 +145,7 @@ h3.heading {
 
 /*Features Section*/
 .fixed {
-	background-image: url("../Images/backgrounds/apple.png");
+	background-image: url(../Images/Backgrounds/Apple.png);
 	z-index: -1;
 }
 .dark {
@@ -167,6 +167,9 @@ h3.heading {
 	overflow-x: hidden;
 	display: block;
 	min-height:100%; 
+}
+.card h3, .card h4{
+	color: #1ebba3;
 }
 .card:hover {
 	bottom: 1rem;
@@ -248,7 +251,6 @@ margin-right: 0px!important;
 /*--- Fix for Fixed Navbar jumping on scroll --*/
 .fixed-top  {
  -webkit-backface-visibility: hidden;
-
 }
 
 /*--- Fixed Landing Page Section --*/
@@ -324,9 +326,8 @@ margin-right: 0px!important;
 	color: #1ebba3;
 	text-transform: uppercase;
 }
-
 .description-underline {
-	width: 120;
+	width: 120%%;
 	height: .2em;
 	background-color: #1ebba3;
 	margin: 0 auto 2rem;
@@ -337,6 +338,7 @@ margin-right: 0px!important;
 	border: 5px solid #1ebba3;
 	border-radius: 1rem;
 	max-height: 320px;
+	margin-bottom: 1rem;
 }
 .upload h3 {
 	color: #1ebba3;
@@ -366,4 +368,47 @@ margin-right: 0px!important;
 ::-webkit-file-upload-button:hover, .submit:hover {
 	background : #189582;
 	border-color: #189582;
+}
+.instruction {
+	padding: 1rem;
+	width: 90%;
+	border: 5px solid #1ebba3;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+.instruction h2 {
+	color: #1ebba3;
+}
+
+.about-us-description {
+	width: 80%;
+	margin-left: 10%;
+	border: 5px solid #1ebba3;
+	border-radius: 1rem;
+}
+.about-us-description h1, .about-us-description h3 {
+	text-align: center;
+	word-spacing: 1rem;
+	color: #1ebba3;
+	text-transform: uppercase;	
+}
+.about-us-description-underline {
+	width: 120%;
+	height: .2em;
+	background-color: #1ebba3;
+	margin: 0 auto 2rem;
+}
+.about {
+	margin: 2rem;
+	text-align: justify;
+}
+.instruction img {
+	vertical-align: middle;
+}
+iframe {
+	margin-left: 25%;
+	margin-bottom: 3rem;
+	border: 5px solid #1ebba3;
+	border-radius: 1rem;
+	box-shadow: 0 1rem 1rem 0;
 }
