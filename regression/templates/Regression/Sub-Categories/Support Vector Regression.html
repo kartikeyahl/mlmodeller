@@ -21,12 +21,12 @@
 		<div class="row text-justify box">
 			<div class="col-lg-4 col-md-12">
 				<div class="upload">
-					<form method="post" action="upload.php">
+				<form method="POST" enctype="multipart/form-data" action="."> {% csrf_token %}
 						<h3>Dataset File</h3>
-						<input type="file" id="datset" name="" accept=".csv" required="" class="upload-box">
+						<input type="file" id="datset" name="data_file" accept=".csv" required="" class="upload-box">
 						<br><br>
 						<h3>Input File</h3>
-						<input type="file" id="input" name="" accept=".csv" required="" class="upload-box">
+						<input type="file" id="input" name="input_file" accept=".csv" required="" class="upload-box">
 						<br><br>
 						<input type="submit" name="" value="Upload" class="submit">
 					</form>
@@ -51,9 +51,9 @@
 							<strong><center>OR</strong></center><br>
 							Before uploading documents, pre-processed any categorical features/columns in the dataset(.csv file), using Label encoding and one hot encoding.<strong>For example:-</strong></p>
 					<div class="row">
-						<img src="../../../Images/Instruction/sheet1.png">
-						<img src="../../../Images/Instruction/arrow.png" height="30%" width="30%">
-						<img src="../../../Images/Instruction/sheet2.png">
+						<img src="{% static 'Images/Instruction/sheet1.png' %}">
+						<img src="{% static 'Images/Instruction/arrow.png' %}" height="30%" width="30%">
+						<img src="{% static 'Images/Instruction/sheet2.png' %}">
 					</div>
 					<p><br><strong>2. Avoid index column in the dataset which you upload.</strong></p>
 				</div>
@@ -80,7 +80,7 @@
 
 					<h1>Examples</h1>
 					<div class="description-underline"></div>
-					<img src="../../../Images/Algorithms/Regression/Examples/Support Vector.png" class="img-fluid">
+					<img src="{% static 'Images/Algorithms/Regression/Examples/Support Vector.png' %}" class="img-fluid">
 				</div>
 			</div>
 		</div>

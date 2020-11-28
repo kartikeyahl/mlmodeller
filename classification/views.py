@@ -207,7 +207,7 @@ def SupportVector(request):
     context = {}
     context['classificationPage'] = True
     context['title'] = 'Support Vector Classification'
-    template_name = "Classification/Sub-Categories/Support Vector.html"
+    template_name = "Classification/Sub-Categories/Linear SVM.html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
         input_csv_file = request.FILES['input_file']
