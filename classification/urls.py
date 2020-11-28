@@ -18,6 +18,6 @@ urlpatterns = [
     path('kernel-svm/', KernelSVM,name="kernel-svm"),
     path('logistic-regression/', LogisticRegression,name="logistic-regression"),
     path('naive-bayes/', NaiveBayes,name="naive-bayes"),
-    path('support-vector/', SupportVector,name="support-vector")
+    path('support-vector/', SupportVector,name="support-vector"),
     path('random-forest/', RandomForest,name="random-forest"),
 ]

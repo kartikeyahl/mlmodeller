@@ -168,7 +168,7 @@ h3.heading {
 	display: block;
 	min-height:100%; 
 }
-.card h3, .card h4{
+.team h3, .team h4{
 	color: #1ebba3;
 }
 .card:hover {
