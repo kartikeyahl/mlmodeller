@@ -4,7 +4,7 @@
 			<!--START OF LANDING PAGE SECTION-->
 			<div class="landing">
 				<div class="home-wrap">
-					<div class="home-inner" background="../../Images/Algorithms/Classification/Classification.png"></div>
+					<div class="home-inner" background="{% static 'Images/Algorithms/Classification/Classification.png' %}"></div>
 				</div>
 			</div>
 
@@ -28,8 +28,8 @@
 					<!--START OF DECISION TREE-->
 					<div class="col-lg-3 col-md-6 text-center">
 						<div class="card catalogue">
-							<a href="Sub-Categories/Decision Tree.html#description">
-								<img class="img-fluid card-img-top" src="../../Images/Algorithms/Classification/Decision Tree.png">
+							<a href="{% url 'decision-tree' %}">
+								<img class="img-fluid card-img-top" src="{% static 'Images/Algorithms/Classification/Decision Tree.png' %}">
 								<div class="card-body">
 									<h3>Decision Tree</h3>
 								</div>
@@ -41,8 +41,8 @@
 					<!--START OF KERNEL SVM-->
 					<div class="col-lg-3 col-md-6 text-center">
 						<div class="card catalogue">
-							<a href="Sub-Categories/Kernel SVM.html#description">
-								<img class="img-fluid card-img-top" src="../../Images/Algorithms/Classification/Kernel SVM.png">
+							<a href="{% url 'kernel-svm' %}">
+								<img class="img-fluid card-img-top" src="{% static 'Images/Algorithms/Classification/Kernel SVM.png' %}">
 								<div class="card-body">
 									<h3>Kernel SVM</h3>
 								</div>
@@ -54,8 +54,8 @@
 					<!--START OF KNN-->
 					<div class="col-lg-3 col-md-6 text-center">
 						<div class="card catalogue">
-							<a href="Sub-Categories/KNN.html#description">
-								<img class="img-fluid card-img-top" src="../../Images/Algorithms/Classification/KNN.png">
+							<a href="{% url 'k-nearest-neighbors' %}">
+								<img class="img-fluid card-img-top" src="{% static 'Images/Algorithms/Classification/KNN.png' %}">
 								<div class="card-body">
 									<h3>K-Nearest Neighbour</h3>
 								</div>
@@ -67,8 +67,8 @@
 					<!--START OF LINEAR SVM-->
 					<div class="col-lg-3 col-md-6 text-center">
 						<div class="card catalogue">
-							<a href="Sub-Categories/Linear SVM.html#description">
-								<img class="img-fluid card-img-top" src="../../Images/Algorithms/Classification/Linear SVM.png">
+							<a href="{% url 'support-vector' %}">
+								<img class="img-fluid card-img-top" src="{% static 'Images/Algorithms/Classification/Linear SVM.png' %}">
 								<div class="card-body">
 									<h3>Linear SVM</h3>
 								</div>
@@ -80,8 +80,8 @@
 					<!--START OF LOGISTIC REGRESSION-->
 					<div class="col-lg-3 col-md-6 text-center">
 						<div class="card catalogue">
-							<a href="Sub-Categories/Logistic Regression.html#description">
-								<img class="img-fluid card-img-top" src="../../Images/Algorithms/Classification/Logistic Regression.png">
+							<a href="{% url 'logistic-regression' %}">
+								<img class="img-fluid card-img-top" src="{% static 'Images/Algorithms/Classification/Logistic Regression.png' %}">
 								<div class="card-body">
 									<h3>Logistic Regression</h3>
 								</div>
@@ -93,8 +93,8 @@
 					<!--START OF NAIVE BAYES-->
 					<div class="col-lg-3 col-md-6 text-center">
 						<div class="card catalogue">
-							<a href="Sub-Categories/Naive Bayes.html#description">
-								<img class="img-fluid card-img-top" src="../../Images/Algorithms/Classification/Naive Bayes.png">
+							<a href="{% url 'naive-bayes' %}">
+								<img class="img-fluid card-img-top" src="{% static 'Images/Algorithms/Classification/Naive Bayes.png' %}">
 								<div class="card-body">
 									<h3>Naive Bayes</h3>
 								</div>
@@ -106,8 +106,8 @@
 					<!--START OF RANDOM FOREST-->
 					<div class="col-lg-3 col-md-6 text-center">
 						<div class="card catalogue">
-							<a href="Sub-Categories/Random Forest.html#description">
-								<img class="img-fluid card-img-top" src="../../Images/Algorithms/Classification/Random Forest.png">
+							<a href="{% url 'random-forest' %}">
+								<img class="img-fluid card-img-top" src="{% static 'Images/Algorithms/Classification/Random Forest.png' %}">
 								<div class="card-body">
 									<h3>Random Forest</h3>
 								</div>
