@@ -37,7 +37,10 @@ def DecisonTreeRegression(request):
         regressor = DecisionTreeRegressor(random_state=0)
         regressor.fit(X, y)
         result = regressor.predict(lst)
-        context['result'] = result
+        f_data = []
+        for res in result:
+            f_data.append(res)
+        context['result'] = f_data
     return render(request, template_name, context)
 
 
@@ -67,7 +70,10 @@ def MultipleLinearRegression(request):
         regressor = LinearRegression()
         regressor.fit(X_train, y_train)
         result = regressor.predict(lst)
-        context['result'] = result
+        f_data = []
+        for res in result:
+            f_data.append(res)
+        context['result'] = f_data
     return render(request, template_name, context)
 
 
@@ -99,7 +105,10 @@ def PolynomialRegression(request):
         lin_reg_2 = LinearRegression()
         lin_reg_2.fit(X_poly, y)
         result = lin_reg_2.predict(poly_reg.fit_transform(lst))
-        context['result'] = result
+        f_data = []
+        for res in result:
+            f_data.append(res)
+        context['result'] = f_data
     return render(request, template_name, context)
 
 
@@ -127,7 +136,10 @@ def RandomForestRegression(request):
         regressor = RandomForestRegressor(n_estimators=10, random_state=0)
         regressor.fit(X, y)
         result = regressor.predict(lst)
-        context['result'] = result
+        f_data = []
+        for res in result:
+            f_data.append(res)
+        context['result'] = f_data
     return render(request, template_name, context)
 
 
@@ -157,7 +169,10 @@ def SimpleLinearRegression(request):
         regressor = LinearRegression()
         regressor.fit(X_train, y_train)
         result = regressor.predict(lst)
-        context['result'] = result
+        f_data = []
+        for res in result:
+            f_data.append(res)
+        context['result'] = f_data
     return render(request, template_name, context)
 
 
@@ -190,5 +205,8 @@ def SupportVectorRegression(request):
         regressor = SVR(kernel='rbf')
         regressor.fit(X, y.ravel())
         result = sc_y.inverse_transform(regressor.predict(sc_X.transform(lst)))
-        context['result'] = result
+        f_data = []
+        for res in result:
+            f_data.append(res)
+        context['result'] = f_data
     return render(request, template_name, context)

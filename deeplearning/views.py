@@ -48,7 +48,10 @@ def ANNSigmoiod(request):
                     metrics=['accuracy'])
         ann.fit(X_train, y_train, batch_size=32, epochs=100)
         result = ann.predict_classes(sc.transform(lst))
-        context['result'] = result
+        f_data = []
+        for res in result:
+            f_data.append(res)
+        context['result'] = f_data
     return render(request, template_name, context)
 
 
@@ -69,7 +72,8 @@ def ANNSoftmax(request):
         dataset = pd.read_csv(csv_file)
         lst = pd.read_csv(input_csv_file)
         X, y = dataset.iloc[:, :-1].values, dataset.iloc[:, -1].values
-        l, p = len(X[1, :]), (l+1)/2
+        l = len(X[1, :])
+        p = (l+1)/2
         imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
         imputer.fit(X[:, :])
         X[:, :] = imputer.transform(X[:, :])
@@ -85,5 +89,8 @@ def ANNSoftmax(request):
                     metrics=['accuracy'])
         ann.fit(X_train, y_train, batch_size=32, epochs=100)
         result = ann.predict_classes(sc.transform(lst))
-        context['result'] = result
+        f_data = []
+        for res in result:
+            f_data.append(res)
+        context['result'] = f_data
     return render(request, template_name, context)
