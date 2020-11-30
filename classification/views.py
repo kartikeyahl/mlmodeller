@@ -117,39 +117,39 @@ def KernelSVM(request):
     return render(request,template_name,context)
 
 
-def LogisticRegression(request):
-    context = {}
-    context['classificationPage'] = True
-    context['title'] = 'Logistic Regression Classification'
-    template_name = "Classification/Sub-Categories/Logistic Regression.html"
-    if request.method == 'POST':
-        csv_file = request.FILES['data_file']
-        input_csv_file = request.FILES['input_file']    
-        if not csv_file.name.endswith('.csv'):
-            messages.error(request,'data file is not a valid CSV file')
-            return redirect('logistic-regression')
-        if not input_csv_file.name.endswith('.csv'):
-            messages.error(request,'input file is not a valid CSV file')
-            return redirect('logistic-regression')
-        dataset = pd.read_csv(csv_file)
-        lst = pd.read_csv(input_csv_file)
-        X = dataset.iloc[:, :-1].values
-        y = dataset.iloc[:, -1].values
-        imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
-        imputer.fit(X[:, :])
-        X[:, :] = imputer.transform(X[:, :])
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
-        sc = StandardScaler()
-        X_train = sc.fit_transform(X_train)
-        X_test = sc.transform(X_test)
-        classifier = LogisticRegression(random_state = 0)
-        classifier.fit(X_train, y_train)
-        result = classifier.predict(sc.transform(lst))
-        f_data = []
-        for res in result:
-            f_data.append(res)
-        context['result'] = f_data
-    return render(request,template_name,context)
+# def LogisticRegression(request):
+#     context = {}
+#     context['classificationPage'] = True
+#     context['title'] = 'Logistic Regression Classification'
+#     template_name = "Classification/Sub-Categories/Logistic Regression.html"
+#     if request.method == 'POST':
+#         csv_file = request.FILES['data_file']
+#         input_csv_file = request.FILES['input_file']    
+#         if not csv_file.name.endswith('.csv'):
+#             messages.error(request,'data file is not a valid CSV file')
+#             return redirect('logistic-regression')
+#         if not input_csv_file.name.endswith('.csv'):
+#             messages.error(request,'input file is not a valid CSV file')
+#             return redirect('logistic-regression')
+#         dataset = pd.read_csv(csv_file)
+#         lst = pd.read_csv(input_csv_file)
+#         X = dataset.iloc[:, :-1].values
+#         y = dataset.iloc[:, -1].values
+#         imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
+#         imputer.fit(X[:, :])
+#         X[:, :] = imputer.transform(X[:, :])
+#         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
+#         sc = StandardScaler()
+#         X_train = sc.fit_transform(X_train)
+#         X_test = sc.transform(X_test)
+#         classifier = LogisticRegression(random_state = 0)
+#         classifier.fit(X_train, y_train)
+#         result = classifier.predict(sc.transform(lst))
+#         f_data = []
+#         for res in result:
+#             f_data.append(res)
+#         context['result'] = f_data
+#     return render(request,template_name,context)
 
 def NaiveBayes(request):
     context = {}

@@ -21,6 +21,7 @@ def ANNSigmoiod(request):
     context = {}
     context["deeplearningPage"] = True
     context['title'] = 'DL | ANN Signoiod'
+    context['title2'] = 'Artificial Neural Network (Binary Output)'
     template_name = "Deep Learning/Sub-Categories/Artificial NN(Sigmoid).html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
@@ -62,6 +63,7 @@ def ANNSoftmax(request):
     context = {}
     context["deeplearningPage"] = True
     context['title'] = 'DL | ANN Softmax'
+    context['title2'] = 'Artificial Neural Network (Non-Binary Output)'
     template_name = "Deep Learning/Sub-Categories/Artificial NN(Sigmoid).html"
     if request.method == 'POST':
         csv_file = request.FILES['data_file']
