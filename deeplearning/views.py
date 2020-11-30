@@ -10,6 +10,7 @@ from keras.preprocessing import image
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+import seaborn as sns
 
 
 def ANNSigmoiod(request):
@@ -27,27 +28,25 @@ def ANNSigmoiod(request):
             messages.error(request, 'input file is not a valid CSV file')
             return redirect('ann')
         dataset = pd.read_csv(csv_file)
-        lst = pd.read_csv(input_csv_file)
         X = dataset.iloc[:, :-1].values
         y = dataset.iloc[:, -1].values
-        l = len(X[1, :])
-        p = (l+1)/2
         imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
         imputer.fit(X[:, :])
         X[:, :] = imputer.transform(X[:, :])
         lst = pd.read_csv(input_csv_file)
-        X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=0)
+        labelencoder_X_1 = LabelEncoder()
+        y = labelencoder_X_1.fit_transform(y)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.1, random_state = 0)
         sc = StandardScaler()
-        X_train, X_test = sc.fit_transform(X_train), sc.transform(X_test)
-        ann = tf.keras.models.Sequential()
-        ann.add(tf.keras.layers.Dense(units=p, activation='relu'))
-        ann.add(tf.keras.layers.Dense(units=p, activation='relu'))
-        ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
-        ann.compile(optimizer='adam', loss='binary_crossentropy',
-                    metrics=['accuracy'])
-        ann.fit(X_train, y_train, batch_size=32, epochs=100)
-        result = ann.predict_classes(sc.transform(lst))
+        X_train = sc.fit_transform(X_train)
+        X_test = sc.transform(X_test)
+        ann = Sequential()
+        ann.add(Dense(units=16, activation='relu'))
+        ann.add(Dense(units=16, activation='relu'))
+        ann.add(Dense(units=1, activation='sigmoid'))
+        ann.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+        ann.fit(X_train, y_train, batch_size=100, epochs=150)
+        result = ann.predict_classes(sc.transform(lst))  
         f_data = []
         for res in result:
             f_data.append(res)
