@@ -1,11 +1,11 @@
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '9%4c42ij1%!rbp!-=tit94lcm6#mkk(33y5$vj0_v$%qfsx^19'
-DEBUG = True
+DEBUG = False
 # SECURE_SSL_REDIRECT = False
 # CSRF_COOKIE_SECURE = False
 # SESSION_COOKIE_SECURE = False
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['172.31.12.101','ip-172-31-12-101.ap-south-1.compute.internal']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -69,4 +69,4 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = False
 STATIC_URL = '/static/'
-STATIC_ROOT= 'static'
+STATIC_ROOT = Path.joinpath(BASE_DIR, "static/")
