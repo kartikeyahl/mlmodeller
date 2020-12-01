@@ -5,7 +5,7 @@ DEBUG = False
 # SECURE_SSL_REDIRECT = False
 # CSRF_COOKIE_SECURE = False
 # SESSION_COOKIE_SECURE = False
-ALLOWED_HOSTS = ['172.31.43.41','ip-172-31-43-41.ap-south-1.compute.internal']
+ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
