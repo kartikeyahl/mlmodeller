@@ -1,11 +1,11 @@
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '9%4c42ij1%!rbp!-=tit94lcm6#mkk(33y5$vj0_v$%qfsx^19'
-DEBUG = False
+DEBUG = True
 # SECURE_SSL_REDIRECT = False
 # CSRF_COOKIE_SECURE = False
 # SESSION_COOKIE_SECURE = False
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['65.0.32.10']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

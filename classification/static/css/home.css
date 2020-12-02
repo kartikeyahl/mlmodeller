@@ -329,6 +329,8 @@ margin-right: 0px!important;
 	border: 1px solid #1ebba3; 
 	font-size: 20px;
 	padding-top: 0px;
+	text-overflow: hidden;
+	overflow: hidden;
 }
 ::-webkit-file-upload-button {
 	color: white;
@@ -387,6 +389,8 @@ margin-right: 0px!important;
 	vertical-align: middle;
 }
 iframe {
+	width: 50%;
+	height: 350px;
 	margin-left: 25%;
 	margin-bottom: 3rem;
 	border: 5px solid #1ebba3;
@@ -426,6 +430,14 @@ iframe {
    	font-size: 1rem;
    	word-spacing: none;
   }
+	iframe {
+		margin: 5%!important;
+		border: 2px solid #1ebba3!important;
+		border-radius: .5rem!important;
+		box-shadow: 0 .5rem .5rem 0!important;
+		width: 90%!important;
+		height: 280px!important;
+	}
 }
 
 @media (max-width: 576px) {
@@ -442,4 +454,13 @@ iframe {
    .upload-box {
    		font-size: .5rem!important;
 	}
+	iframe {
+		margin: 5%;
+		border: 2px solid #1ebba3;
+		border-radius: .5rem;
+		box-shadow: 0 .5rem .5rem 0;
+		width: 95%!important;
+		height: 200px!important;
+	}
+
 }
