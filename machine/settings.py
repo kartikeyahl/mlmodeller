@@ -5,7 +5,7 @@ DEBUG = True
 # SECURE_SSL_REDIRECT = False
 # CSRF_COOKIE_SECURE = False
 # SESSION_COOKIE_SECURE = False
-ALLOWED_HOSTS = ['65.0.32.10']
+ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
