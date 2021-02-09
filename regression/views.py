@@ -13,7 +13,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 
 
-def DecisonTreeRegression(request):
+def DecisionTreeRegression(request):
     context = {}
     context["regressionPage"] = True
     context['title'] = 'Decission Tree Regression'

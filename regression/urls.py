@@ -1,6 +1,6 @@
 from django.urls import path
 from django.shortcuts import render
-from .views import DecisonTreeRegression, MultipleLinearRegression, PolynomialRegression, RandomForestRegression, SimpleLinearRegression, SupportVectorRegression
+from .views import DecisionTreeRegression, MultipleLinearRegression, PolynomialRegression, RandomForestRegression, SimpleLinearRegression, SupportVectorRegression
 
 
 def Index(request):
@@ -16,6 +16,6 @@ urlpatterns = [
     path('multiple-linear-regression/', MultipleLinearRegression,name="multiple-linear-regression"),
     path('polynomial-regression/', PolynomialRegression,name="polynomial-regression"),
     path('support-vector-regression/', SupportVectorRegression,name="support-vector-regression"),
-    path('decisiontree-regression/', DecisonTreeRegression,name="decisiontree-regression"),
+    path('decisiontree-regression/', DecisionTreeRegression,name="decisiontree-regression"),
     path('random-forest-regression/', RandomForestRegression,name="random-forest-regression"),
 ]
