@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     'classification',
     #'deeplearning',
     'regression',
+    'blog',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

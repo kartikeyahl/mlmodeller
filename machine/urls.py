@@ -24,6 +24,7 @@ urlpatterns = [
     path('',Index),
     path('about-us/',About),
     path('classification/', include('classification.urls')),
+    path('blog/', include('blog.urls')),
     #path('deeplearning/', include('deeplearning.urls')),
     path('regression/', include('regression.urls')),
 ]
