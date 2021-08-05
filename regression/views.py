@@ -129,7 +129,7 @@ def PolynomialRegression(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
-            y_pred = regressor.predict(X_poly)
+            y_pred = lin_reg_2.predict(X_poly)
             from sklearn.metrics import mean_squared_error
             mse=mean_squared_error(y,y_pred)
             rms = mean_squared_error(y,y_pred, squared=False)
