@@ -47,6 +47,10 @@ def DecisionTree(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
+            y_pred = classifier.predict(X_test)
+            from sklearn.metrics import accuracy_score
+            acc=accuracy_score(y_test, y_pred)
+            context['accuracy']= acc*100
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request,template_name,context)
@@ -84,6 +88,10 @@ def KNearestNeighbors(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
+            y_pred = classifier.predict(X_test)
+            from sklearn.metrics import accuracy_score
+            acc=accuracy_score(y_test, y_pred)
+            context['accuracy']= acc*100
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request,template_name,context)
@@ -122,6 +130,10 @@ def KernelSVM(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
+            y_pred = classifier.predict(X_test)
+            from sklearn.metrics import accuracy_score
+            acc=accuracy_score(y_test, y_pred)
+            context['accuracy']= acc*100
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request,template_name,context)
@@ -197,6 +209,10 @@ def NaiveBayes(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
+            y_pred = classifier.predict(X_test)
+            from sklearn.metrics import accuracy_score
+            acc=accuracy_score(y_test, y_pred)
+            context['accuracy']= acc*100
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request,template_name,context)
@@ -235,6 +251,10 @@ def RandomForest(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
+            y_pred = classifier.predict(X_test)
+            from sklearn.metrics import accuracy_score
+            acc=accuracy_score(y_test, y_pred)
+            context['accuracy']= acc*100
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request,template_name,context)
