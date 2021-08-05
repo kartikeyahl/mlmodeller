@@ -42,6 +42,7 @@ def DecisionTreeRegression(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
+            
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request, template_name, context)
@@ -78,6 +79,10 @@ def MultipleLinearRegression(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
+            y_pred = classifier.predict(X_test)
+            from sklearn.metrics import mean_squared_error
+            mse=mean_squared_error(y_test,Y_pred)
+            context['mse']=mse
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request, template_name, context)
