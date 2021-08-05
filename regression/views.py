@@ -211,12 +211,6 @@ def SimpleLinearRegression(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
-            y_pred = regressor.predict(X_test)
-            from sklearn.metrics import mean_squared_error
-            mse=mean_squared_error(y_test,y_pred)
-            rms = mean_squared_error(y,y_pred, squared=False)
-            context['mse']=mse
-            context['rms']=rms
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request, template_name, context)
