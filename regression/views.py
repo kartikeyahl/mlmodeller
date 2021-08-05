@@ -79,7 +79,7 @@ def MultipleLinearRegression(request):
             for res in result:
                 f_data.append(res)
             context['result'] = f_data
-            y_pred = classifier.predict(X_test)
+            y_pred = regressor.predict(X_test)
             from sklearn.metrics import mean_squared_error
             mse=mean_squared_error(y_test,Y_pred)
             context['mse']=mse*100
