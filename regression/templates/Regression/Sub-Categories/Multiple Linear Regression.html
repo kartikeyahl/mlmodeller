@@ -38,7 +38,7 @@
 					<p></p>
 					<ul>
 						{% for value in result %}
-							<li>{{value}}</li>
+							<li>{{value|floatformat:2}}</li>
 						{% endfor %}
 						</ul>
 				</div>
@@ -48,8 +48,9 @@
 					<p></p>
 					<ul>
 						
-							<li>Mean Squared Error: {{mse}}</li>
-							<li>Root Mean Squared Error: {{rms}}</li>
+							<li>Mean Squared Error: {{mse|floatformat:2}}</li>
+							<li>Root Mean Squared Error: {{rms|floatformat:2}}</li>
+							<li>Mean Absolute Error: {{mae|floatformat:2}}</li>
 						
 						</ul>
 				</div>
