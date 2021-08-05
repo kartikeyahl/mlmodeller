@@ -82,7 +82,7 @@ def MultipleLinearRegression(request):
             context['result'] = f_data
             y_pred = regressor.predict(X_test)
             from sklearn.metrics import mean_squared_error
-            mse=mean_squared_error(y_test,Y_pred)
+            mse=mean_squared_error(y_test,y_pred)
             context['mse']=mse*100
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
