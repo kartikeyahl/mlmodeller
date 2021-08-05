@@ -276,7 +276,7 @@ def SupportVector(request):
             y_pred = classifier.predict(X_test)
             from sklearn.metrics import accuracy_score
             acc=accuracy_score(y_test, y_pred)
-            context['accuracy']= acc
+            context['accuracy']= acc*100
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request,template_name,context)
