@@ -38,7 +38,7 @@
 					<p></p>
 					<ul>
 						{% for value in result %}
-							<li>{{value}}</li>
+							<li>{{value|floatformat:2}}</li>
 						{% endfor %}
 						</ul>
 				</div>
@@ -48,9 +48,9 @@
 					<p></p>
 					<ul>
 						
-							<li>Mean Squared Error: Not available try other models</li>
-							<li>Root Mean Squared Error: Not available try other models</li>
-							<li>Mean Absolute Error: Not available try other models</li>
+							<li><b>Mean Squared Error:</b> Not available try other models</li>
+							<li><b>Root Mean Squared Error:</b> Not available try other models</li>
+							<li><b>Mean Absolute Error:</b> Not available try other models</li>
 						
 						</ul>
 				</div>
