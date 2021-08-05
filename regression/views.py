@@ -44,11 +44,13 @@ def DecisionTreeRegression(request):
                 f_data.append(res)
             context['result'] = f_data
             y_pred = regressor.predict(X)
-            from sklearn.metrics import mean_squared_error
+            from sklearn.metrics import mean_squared_error, mean_absolute_error as ma
             mse=mean_squared_error(y,y_pred)
             rms = mean_squared_error(y,y_pred, squared=False)
+            mae = ma(y,y_pred)
             context['mse']=mse
             context['rms']=rms
+            context['mae']=mae
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request, template_name, context)
@@ -86,11 +88,13 @@ def MultipleLinearRegression(request):
                 f_data.append(res)
             context['result'] = f_data
             y_pred = regressor.predict(X_test)
-            from sklearn.metrics import mean_squared_error
+            from sklearn.metrics import mean_squared_error, mean_absolute_error as ma
             mse=mean_squared_error(y_test,y_pred)
             rms = mean_squared_error(y_test,y_pred, squared=False)
+            mae=ma(y_test,y_pred)
             context['mse']=mse
             context['rms']=rms
+            context['mae']=ma
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request, template_name, context)
@@ -130,11 +134,13 @@ def PolynomialRegression(request):
                 f_data.append(res)
             context['result'] = f_data
             y_pred = lin_reg_2.predict(X_poly)
-            from sklearn.metrics import mean_squared_error
+            from sklearn.metrics import mean_squared_error, mean_absolute_error as ma
             mse=mean_squared_error(y,y_pred)
             rms = mean_squared_error(y,y_pred, squared=False)
+            mae= ma(y,y_pred)
             context['mse']=mse
             context['rms']=rms
+            context['mae']=mae
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request, template_name, context)
@@ -170,11 +176,13 @@ def RandomForestRegression(request):
                 f_data.append(res)
             context['result'] = f_data
             y_pred = regressor.predict(X)
-            from sklearn.metrics import mean_squared_error
+            from sklearn.metrics import mean_squared_error, mean_absolute_error as ma
             mse=mean_squared_error(y,y_pred)
             rms = mean_squared_error(y,y_pred, squared=False)
+            mae= ma(y,y_pred)
             context['mse']=mse
             context['rms']=rms
+            context['mae']=mae
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request, template_name, context)
@@ -251,11 +259,13 @@ def SupportVectorRegression(request):
                 f_data.append(res)
             context['result'] = f_data
             y_pred = regressor.predict(X)
-            from sklearn.metrics import mean_squared_error
+            from sklearn.metrics import mean_squared_error, mean_absolute_error as ma
             mse=mean_squared_error(y,y_pred)
             rms = mean_squared_error(y,y_pred, squared=False)
+            mae= ma(y,y_pred)
             context['mse']=mse
             context['rms']=rms
+            context['mae']=mae
         except Exception as e:
             return HttpResponse("Error Occured , Reason : " + str(e))
     return render(request, template_name, context)
